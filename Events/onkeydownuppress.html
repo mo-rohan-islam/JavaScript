@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onkeydown up and press</title>
+        <script>
+            function handleKeyDown(input) {
+                input.style.color = "red";
+                input.style.backgroundColor = "blue";
+            }   
+            
+            function handleKeyUp(input) {
+                input.style.color = "blue";
+                input.style.backgroundColor = "red";
+            }
+
+            function handleKeyPress(input) {
+                input.style.color = "green";
+                input.style.backgroundColor = "yellow";
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" onkeydown="handleKeyDown(this)" onkeyup="handleKeyUp(this)" onkeypress="handleKeyPress(this)">
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onclick</title>
+        <script>
+            function calculate(buttonClicked) {
+                var x = parseInt(document.calcform.num1.value);
+                var y = parseInt(document.calcform.num2.value);
+                var z = document.calcform.result;
+
+                switch (buttonClicked.value) {
+                case "Add":
+                    z.value = x + y;
+                    break;
+                case "Sub":
+                    z.value = x - y;
+                    break;
+                case "Mul":
+                    z.value = x * y;
+                    break;
+                case "Div":
+                    z.value = x / y;
+                    break;
+                case "Mod":
+                    z.value = x % y;
+                    break;
+                default:
+                    z.value = "Unknown";
+                    break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="calcform">
+            Number1: <input type="text" name="num1"/>
+            <br/>
+            Number2: <input type="text" name="num2"/>
+            <br/>
+            Result: <input type="text" name="result"/>
+            <br/>
+            <input type="button" name="add" value="Add" onclick="calculate(this)"/>
+            <input type="button" name="sub" value="Sub" onclick="calculate(this)"/>
+            <input type="button" name="mul" value="Mul" onclick="calculate(this)"/>
+            <input type="button" name="div" value="Div" onclick="calculate(this)"/>
+            <input type="button" name="mod" value="Mod" onclick="calculate(this)"/>
+        </form>
+    </body>
+</html>

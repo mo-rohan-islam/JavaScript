@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onchange</title>
+        <script>
+            function handleOnChangeEvent(color) {
+                document.bgColor = color;
+            }
+        </script>
+    </head>
+    <body>
+        <select onchange="handleOnChangeEvent(this.value)">
+            <option value="">Select a color</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+        </select>
+    </body>
+</html>

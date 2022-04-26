@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onload redirect</title>
+        <script>
+            function waitForFewSeconds() {
+                setTimeout(redirect, 3000);
+            }
+            
+            function redirect() {
+                window.location = "http://www.bharaththippireddy.com";
+            }
+        </script>
+    </head>
+    <body onload="waitForFewSeconds()">
+        <b>Redirecting...</b>
+    </body>
+</html>
