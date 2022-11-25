@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <script>
+        const dimension = parseInt(prompt("Enter dimension of the chessboard", "17"));
+        // const dimension = 8;
+        var sign = "+";
+
+        drawChessBoard(sign);
+
+        function drawChessBoard(sign) {
+            for (let outer_index = 0; outer_index < dimension + 2; outer_index++) {
+                if (outer_index == 0 || outer_index == dimension + 1) {
+                    document.write(Array(dimension + 1).fill("*").join(' '));
+                    // for (let index = 0; index < dimension + 2; index++) {
+                    //     document.write("*");                    
+                    // }
+                    document.write("<br>")
+                } else {
+                    for (let inner_index = 0; inner_index < dimension + 2; inner_index++) {
+                        if (inner_index == 0 || inner_index == dimension + 1) {
+                            document.write("* ")
+                        } else {
+                            document.write(sign + " ");
+                            sign = switchSign(sign);
+                        }
+                    }
+                    document.write("<br>");
+                    if (! (dimension % 2)) {
+                        sign = switchSign(sign);
+                    }
+                }
+            }
+        }
+
+        function switchSign(sign) {
+            return (sign == "-") ? "+" : "-";
+        }
+    </script>
+</head>
+
+</html>
