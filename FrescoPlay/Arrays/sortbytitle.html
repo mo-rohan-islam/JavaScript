@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sort by Title</title>
+</head>
+<script>
+    var library = [
+        {author: "Bill Gates", title: "The Road Ahead", libraryID: 1254},
+        {author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264},
+        {
+            author: "Suzanne Collins",
+            title: "Mockingjay: The Final Book of The Hunger Games",
+            libraryID: 3245,
+        },
+    ];
+
+    library.sort( function ( item1, item2 ) {
+        result = item1.title.localeCompare( item2.title );
+        console.log( result );
+        return result;
+    } );
+    console.log( library );
+</script>
+
+</html>

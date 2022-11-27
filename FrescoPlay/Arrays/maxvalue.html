@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Array Functions</title>
+</head>
+<script>
+    var numbers = [3, 342, 23, 22, 124];
+        var max = 0;
+        // for (var i = 0; i < numbers.length; i++) {
+        //     if (numbers[i] > max) {
+        //         max = numbers[i];
+        //     }
+        // }
+
+        max = Math.max.apply(null, numbers);     // solution 1
+
+        // numbers.sort(function(a, b) {
+        //     return a - b;
+        // });
+        // max = numbers[numbers.length - 1];       // solution 2 - changes the array
+
+        // numbers.sort(function(a, b) {return b - a});
+        // max = numbers[0];                        // solution 3 - changes the array
+        
+        console.log(numbers);
+        console.log(max)
+        alert(max);
+</script>
+<body>
+	
+</body>
+</html>
